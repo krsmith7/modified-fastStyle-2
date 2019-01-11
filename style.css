@@ -9,13 +9,19 @@
   flex-direction: column;
 }
 
+.body-container-heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .body-container-subheading {
   font-family: 'Thasadith', sans-serif;
+  color: grey;
 }
 
 .transfer-container {
   display: flex;
   justify-content: center;
+  margin: 30px;
 }
 
 .transfer-container-grid {
@@ -28,16 +34,23 @@
 }
 
 .transfer-container-grid-input {
-  background-color: red;
   grid-area: input;
 }
 
 .transfer-container-grid-style {
-  background-color: blue;
   grid-area: style;
+}
+
+.transfer-inputs {
+  height: 250px;
+  width: 250px;
 }
 
 .transfer-container-grid-result {
   grid-area: result;
-  background-color: purple;
+}
+
+.transfer-output {
+  height: 500px;
+  width: 500px;
 }
