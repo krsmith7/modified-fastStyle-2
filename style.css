@@ -7,6 +7,7 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .body-container-heading {
@@ -22,6 +23,7 @@
   display: flex;
   justify-content: center;
   margin: 30px;
+
 }
 
 .transfer-container-grid {
@@ -68,4 +70,37 @@
 
 #try-button a:hover {
     border: blue;
+}
+
+.create-transfer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: lightgrey;
+  padding: 50px;
+  margin: 250px;
+}
+
+.create-transfer-input-section {
+  background-color: aliceblue;
+  display: grid;
+}
+
+.create-transfer-style-section {
+  background-color: lavender;
+  display: grid;
+}
+
+.create-transfer-result-section {
+  background-color: thistle;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: space-between;
+}
+.thumbnails img {
+  width: 100px;
+  height: 100px;
+  padding: 15px;
 }
