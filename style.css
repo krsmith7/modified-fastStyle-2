@@ -1,0 +1,43 @@
+.center-text {
+  text-align: center;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.body-container-subheading {
+  font-family: 'Thasadith', sans-serif;
+}
+
+.transfer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.transfer-container-grid {
+  display: grid;
+  width: 60%;
+  height: 70%;
+  grid-template: "input result result"
+                 "style result result";
+  grid-gap: 10px;
+}
+
+.transfer-container-grid-input {
+  background-color: red;
+  grid-area: input;
+}
+
+.transfer-container-grid-style {
+  background-color: blue;
+  grid-area: style;
+}
+
+.transfer-container-grid-result {
+  grid-area: result;
+  background-color: purple;
+}
