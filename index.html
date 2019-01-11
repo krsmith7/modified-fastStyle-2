@@ -2,38 +2,50 @@
   <head>
     <meta charset="UTF-8">
     <title>StencilFlow</title>
-
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Thasadith" rel="stylesheet">
-
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.dom.min.js"></script>
     <script src="libraries/ml5.min.js"></script>
-
   </head>
 
   <body>
     <div class="body-container">
-      <h1 class="body-container-heading center-text">STENCIL FLOW</h1>
-      <h2 class="body-container-subheading center-text">Turn your ordinary image into a new masterpiece</h2>
-      <div class="transfer-container">
-        <div class="transfer-container-grid">
-          <div class="transfer-container-grid-input">
-            <img class="transfer-inputs" src="./images/girlwithpearl.jpg" alt="Girl with Pearl Earring Painting">
-          </div>
 
-          <div class="transfer-container-grid-style">
-              <img class="transfer-inputs" src="./images/wave.jpg" alt="Wave Painting">
-          </div>
+      <section id="header-section">
+        <header>
+          <h1 class="body-container-heading center-text">STENCIL FLOW</h1>
+          <h2 class="body-container-subheading center-text">Turn your ordinary image into a new masterpiece</h2>
+        </header>
+      </section>
 
-          <div class="transfer-container-grid-result">
-            <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style">
+
+      <section id="example-transfer">
+        <div class="transfer-container">
+          <div class="transfer-container-grid">
+
+            <div class="transfer-container-grid-input">
+              <img class="transfer-inputs" src="./images/girlwithpearl.jpg" alt="Girl with Pearl Earring Painting">
+            </div>
+
+            <div class="transfer-container-grid-style">
+                <img class="transfer-inputs" src="./images/wave.jpg" alt="Wave Painting">
+            </div>
+
+            <div class="transfer-container-grid-result">
+              <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style">
+            </div>
+            
           </div>
         </div>
 
-      </div>
-      <button class="try-button">Try it Yourself</button>
-    </div>
+        <button class="try-button">Try it Yourself</button>
+      </section>
 
+
+      <section id="create-transfer">
+      </section>
+
+    </div>
   </body>
 </html>
