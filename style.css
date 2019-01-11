@@ -27,7 +27,7 @@
 .transfer-container-grid {
   display: grid;
   width: 60%;
-  height: 70%;
+  height: 40%;
   grid-template: "input result result"
                  "style result result";
   grid-gap: 10px;
@@ -53,4 +53,19 @@
 .transfer-output {
   height: 500px;
   width: 500px;
+}
+
+.try-button {
+    border: grey;
+    width: 20%;
+    font-size: 18px;
+    background: white;
+}
+
+.try-button a:link, a:visited {
+    border: dimgrey;
+}
+
+.try-button a:hover {
+    border: blue;
 }
