@@ -55,17 +55,17 @@
   width: 500px;
 }
 
-.try-button {
+#try-button {
     border: grey;
     width: 20%;
     font-size: 18px;
     background: white;
 }
 
-.try-button a:link, a:visited {
+#try-button a:link, a:visited {
     border: dimgrey;
 }
 
-.try-button a:hover {
+#try-button a:hover {
     border: blue;
 }
