@@ -53,8 +53,9 @@
                 <img src="./images/monalisa.jpg" alt="Mona Lisa painting">
             </div>
             <div class="user-add-content">
-              <button id="upload-image-button">Upload an image</button>
-              <button id="use-webcam-button">Use Webcam</button>
+              <input id="uploader" name="inputImgFile" type="file" accept="image/*">
+              <button id="upload-image-button" onclick="uploadImage()">Upload an image</button>
+              <button id="use-webcam-button" onclick="useWebcam()">Use Webcam</button>
             </div>
           </div>
 
