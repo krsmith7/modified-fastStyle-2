@@ -46,3 +46,12 @@ function setup() {
 // // https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 //   navigator.mediaDevices.getUserMedia(constraints)
 // }
+
+function newContentImage() {
+  if (uploader.files && uploader.files[0]) {
+    let newImageUrl = window.URL.createObjectURL(uploader.files[0]);
+    contentImage.src = newImageUrl;
+    contentImage.style.width = '250px';
+    contentImage.style.height = '250px';
+  }
+}
