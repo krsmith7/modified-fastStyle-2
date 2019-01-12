@@ -73,9 +73,31 @@ function doTransfer(model) {
 }
 
 function draw() {
-  if (modelReady && start) {
+  if (modelReady) {
     doTransfer(currentModel);
   }
+}
+
+function updateContentImage(ele) {
+  if (ele.src) {
+    contentImage.src = ele.src;
+    doTransfer(currentModel);
+  }
+}
+
+
+function updateStyleImage(ele) {
+  if (ele.src) {
+    styleImage.src = ele.src;
+    currentModel = ele.id;
+  }
+  if (currentModel) {
+    doTransfer(currentModel);
+  }
+}
+
+function uploadImage() {
+  uploader.click();
 }
 
 // Set image uploaded from user as contentImage
