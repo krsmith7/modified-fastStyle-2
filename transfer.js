@@ -1,0 +1,14 @@
+let styles = {};
+let models = ['la_muse', 'rain_princess', 'wave', 'scream', 'wreck', 'udnie'];
+let contentImage, styleImage;
+let resultImageData;
+let resultImage;
+let modelNum = 0;
+let currentModel = 'wave';
+let uploader;
+let webCam = false;
+let modelReady = false;
+let video;
+let start = false;
+let isLoading = true;
+let onSafari = false;
