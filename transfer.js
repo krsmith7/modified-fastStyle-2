@@ -47,13 +47,14 @@ function setup() {
 //   navigator.mediaDevices.getUserMedia(constraints)
 // }
 
+
 // When models are loaded
-function modelLoaded () {
+function modelLoaded() {
   modelNum++;
   if (modelNum >= models.length) {
     modelReady = true;
   // get ml prediction for selected content image
-    doTransfer(currentModel);
+    // doTransfer(currentModel);
   }
 }
 
@@ -69,6 +70,12 @@ function doTransfer(model) {
   resultImage = ml5.array3DToImage(resultImageData);
   resultImageContainer.elt.src = resultImage.src;
   isLoading = false;
+}
+
+function draw() {
+  if (modelReady && start) {
+    doTransfer(currentModel);
+  }
 }
 
 // Set image uploaded from user as contentImage
