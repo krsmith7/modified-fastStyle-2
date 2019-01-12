@@ -14,7 +14,7 @@ let isLoading = true;
 
 
 function setup() {
-
+  // Remove unneeded default p5 sketch canvas
   noCanvas();
 
 // Get starting images by id. elt refers to html element
@@ -32,5 +32,7 @@ function setup() {
   uploader = select('#uploader').elt;
   uploader.addEventListener('change', newContentImage);
 
-
+  // Resulting Image Container
+  resultImageContainer = createImg('images/loading.gif', 'image');
+  resultImageContainer.parent('result-image-container');
 }
