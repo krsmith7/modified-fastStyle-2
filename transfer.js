@@ -34,5 +34,15 @@ function setup() {
 
   // Resulting Image Container
   resultImageContainer = createImg('images/loading.gif', 'image');
+  // Specify location so new img element is not added to end of page by default
   resultImageContainer.parent('result-image-container');
+
+  // Get permission for camera
+  // getCameraAccess();
 }
+
+// Method to use user camera
+// function getCameraAccess() {
+// // https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+//   navigator.mediaDevices.getUserMedia(constraints)
+// }
