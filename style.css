@@ -79,16 +79,24 @@
   background: lightgrey;
   padding: 50px;
   margin: 250px;
+  width: 700px;
+}
+
+.create-transfer-input-section, .create-transfer-style-section, .create-transfer-result-section {
+  border-radius: 10%;
+
 }
 
 .create-transfer-input-section {
   background-color: aliceblue;
   display: grid;
+  margin: 15px;
 }
 
 .create-transfer-style-section {
   background-color: lavender;
   display: grid;
+  margin: 15px;
 }
 
 .create-transfer-result-section {
@@ -97,8 +105,11 @@
 
 .thumbnails {
   display: flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
   justify-content: space-between;
 }
+
 .thumbnails img {
   width: 100px;
   height: 100px;
