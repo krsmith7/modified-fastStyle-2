@@ -3,6 +3,7 @@ let models = ['la_muse', 'rain_princess', 'wave', 'scream', 'wreck', 'udnie'];
 let contentImage, styleImage;
 let resultImageData;
 let resultImage;
+let resultImageContainer;
 let modelNum = 0;
 let currentModel = 'wave';
 let uploader;
@@ -22,8 +23,7 @@ function setup() {
   styleImage = select('#style-image').elt;
 
 // Load style models with ml5
-// ml5 doc:
-// style1 = ml5.styleTransfer('models/wave', modelLoaded);
+// ml5 doc: style1 = ml5.styleTransfer('models/wave', modelLoaded);
   models.forEach(s => {
     styles[s] = new ml5.TransformNet('models/' + s + '/', modelLoaded);
   });
@@ -47,6 +47,31 @@ function setup() {
 //   navigator.mediaDevices.getUserMedia(constraints)
 // }
 
+// When models are loaded
+function modelLoaded () {
+  modelNum++;
+  if (modelNum >= models.length) {
+    modelReady = true;
+  // get ml prediction for selected content image
+    doTransfer(currentModel);
+  }
+}
+
+// Function to predict resulting transfer image
+function doTransfer(model) {
+  isLoading = true;
+
+  if (!modelReady) return;
+  if (contentImage) {
+    resultImageData = styles[model].predict(contentImage);
+  }
+// Convert prediction data array to image
+  resultImage = ml5.array3DToImage(resultImageData);
+  resultImageContainer.elt.src = resultImage.src;
+  isLoading = false;
+}
+
+// Set image uploaded from user as contentImage
 function newContentImage() {
   if (uploader.files && uploader.files[0]) {
     let newImageUrl = window.URL.createObjectURL(uploader.files[0]);
