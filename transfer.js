@@ -1,6 +1,7 @@
 let styles = {};
 let models = ['la_muse', 'rain_princess', 'wave', 'scream', 'wreck', 'udnie'];
-let contentImage, styleImage;
+let contentImage;
+let styleImage;
 let resultImageData;
 let resultImage;
 let resultImageContainer;
@@ -63,6 +64,8 @@ function doTransfer(model) {
   isLoading = true;
 
   if (!modelReady) return;
+
+  console.log(`in doTransfer function. model: ${model}, contentImage: ${contentImage.id}, taco taco taco`);
   if (contentImage) {
     resultImageData = styles[model].predict(contentImage);
   }
@@ -87,6 +90,7 @@ function updateContentImage(ele) {
 
 
 function updateStyleImage(ele) {
+  console.log(ele);
   if (ele.src) {
     styleImage.src = ele.src;
     currentModel = ele.id;
