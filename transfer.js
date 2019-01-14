@@ -75,8 +75,9 @@ function doTransfer(model) {
   isLoading = false;
 }
 
+// draw function runs continuously by default
 function draw() {
-  if (modelReady) {
+  if (modelReady && start) {
     doTransfer(currentModel);
   }
 }
@@ -84,7 +85,7 @@ function draw() {
 function updateContentImage(ele) {
   if (ele.src) {
     contentImage.src = ele.src;
-    doTransfer(currentModel);
+    // doTransfer(currentModel);
   }
 }
 
@@ -95,9 +96,9 @@ function updateStyleImage(ele) {
     styleImage.src = ele.src;
     currentModel = ele.id;
   }
-  if (currentModel) {
-    doTransfer(currentModel);
-  }
+  // if (currentModel) {
+  //   doTransfer(currentModel);
+  // }
 }
 
 function uploadImage() {
@@ -112,4 +113,10 @@ function newContentImage() {
     contentImage.style.width = '250px';
     contentImage.style.height = '250px';
   }
+}
+
+function enableTransfer() {
+  start = true;
+  doTransfer(currentModel);
+  start = false;
 }
