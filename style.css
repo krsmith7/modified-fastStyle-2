@@ -98,6 +98,11 @@
   margin: 15px;
 }
 
+.create-transfer-input-image, .create-transfer-style-image {
+  display: flex;
+  justify-content: center;
+}
+
 .create-transfer-result-section {
   background-color: thistle;
 }
