@@ -115,3 +115,13 @@
   height: 100px;
   padding: 15px;
 }
+
+.create-transfer-result-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#result-image-container img {
+  width: 400px;
+}
