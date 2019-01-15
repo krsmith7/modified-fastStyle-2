@@ -78,14 +78,12 @@
   justify-content: space-around;
   background: lightgrey;
   padding: 50px;
-  margin: 250px;
-  width: 700px;
 }
 
 .create-transfer-input-section, .create-transfer-style-section, .create-transfer-result-section {
   border-radius: 10%;
   padding: 30px;
-
+  width: 460px;
 }
 
 .create-transfer-input-section {
