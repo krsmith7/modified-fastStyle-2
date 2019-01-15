@@ -84,7 +84,7 @@
 
 .create-transfer-input-section, .create-transfer-style-section, .create-transfer-result-section {
   border-radius: 10%;
-  padding: 20px;
+  padding: 30px;
 
 }
 
@@ -105,9 +105,10 @@
 }
 
 .thumbnails {
+  width: 400px;
   display: flex;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
