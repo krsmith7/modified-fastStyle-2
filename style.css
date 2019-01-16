@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 
-.body-container-heading {
+.body-container-heading, h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: lightgrey;
+  /* background: lightgrey; */
   padding: 50px;
 }
 
@@ -84,6 +84,7 @@
   border-radius: 10%;
   padding: 30px;
   width: 460px;
+    /* border: solid 1px dimgrey; */
 }
 
 .create-transfer-input-section {
@@ -104,13 +105,12 @@
 }
 
 .create-transfer-result-section {
-  background-color: thistle;
+  background-color: whitesmoke;
 }
 
 .thumbnails {
   width: 400px;
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: space-between;
 }
