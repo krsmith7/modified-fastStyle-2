@@ -91,7 +91,6 @@ function updateContentImage(ele) {
 
 
 function updateStyleImage(ele) {
-  console.log(ele);
   if (ele.src) {
     styleImage.src = ele.src;
     currentModel = ele.id;
