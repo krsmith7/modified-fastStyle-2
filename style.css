@@ -24,7 +24,6 @@
   display: flex;
   justify-content: center;
   margin: 30px;
-
 }
 
 .transfer-container-grid {
@@ -61,7 +60,7 @@
 #try-button {
     border: solid grey 1px;
     border-radius: 10%;
-    width: 20%;
+    width: 10%;
     font-size: 18px;
     text-decoration: none;
     padding: 10px;
@@ -82,7 +81,7 @@ a#try-button:hover {
   flex-direction: row;
   justify-content: space-around;
   /* background: lightgrey; */
-  padding: 50px;
+  padding: 30px;
 }
 
 .create-transfer-input-section, .create-transfer-style-section, .create-transfer-result-section {
