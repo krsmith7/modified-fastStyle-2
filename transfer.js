@@ -91,7 +91,6 @@ function draw() {
 function updateContentImage(ele) {
   if (ele.src) {
     contentImage.src = ele.src;
-    // doTransfer(currentModel);
   }
 }
 
@@ -101,9 +100,6 @@ function updateStyleImage(ele) {
     styleImage.src = ele.src;
     currentModel = ele.id;
   }
-  // if (currentModel) {
-  //   doTransfer(currentModel);
-  // }
 }
 
 function uploadImage() {
