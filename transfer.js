@@ -35,7 +35,7 @@ function setup() {
 
   // Resulting Image Container
   resultImageContainer = createImg('images/loading.gif', 'image');
-  // Specify location so new img element is not added to end of page by default
+  // Specify location so new img element is not not added to end of page by default
   resultImageContainer.parent('result-image-container');
 
   // Get permission for camera
