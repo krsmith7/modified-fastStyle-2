@@ -1,5 +1,5 @@
 let styles = {};
-let models = ['la_muse', 'rain_princess', 'wave', 'scream', 'wreck', 'udnie'];
+const models = ['la_muse', 'rain_princess', 'wave', 'scream', 'wreck', 'udnie'];
 let contentImage;
 let styleImage;
 let resultImageData;
@@ -13,11 +13,18 @@ let modelReady = false;
 let video;
 let start = false;
 let isLoading = true;
+const exampleSection = document.getElementById("transfer-container");
+const createSection = document.getElementById("create-transfer-container");
+const button = document.getElementById("try-button");
 
 
 function setup() {
   // Remove unneeded default p5 sketch canvas
   noCanvas();
+
+  // Show example section. Hide create-transfer section
+  exampleSection.style.display = "block";
+  createSection.style.display = "none";
 
 // Get starting images by id. elt refers to html element
   contentImage = select('#content-image').elt;
@@ -118,4 +125,11 @@ function enableTransfer() {
   start = true;
   doTransfer(currentModel);
   start = false;
+}
+
+// Remove example section when try button is clicked
+function showTransfer() {
+  createSection.style.display = "block";
+  exampleSection.style.display = "none";
+  button.style.display = "none";
 }
