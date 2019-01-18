@@ -58,18 +58,22 @@
 }
 
 #try-button {
-    border: grey;
+    border: solid grey 1px;
+    border-radius: 10%;
     width: 20%;
     font-size: 18px;
-    background: white;
+    text-decoration: none;
+    padding: 10px;
+    color: #327068;
+    margin-left: 20px;
 }
 
 #try-button a:link, a:visited {
-    border: dimgrey;
+    border: grey;
 }
 
-#try-button a:hover {
-    border: blue;
+a#try-button:hover {
+    border: solid #327068 1px;
 }
 
 .create-transfer-container {
