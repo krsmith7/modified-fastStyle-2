@@ -22,8 +22,7 @@ function setup() {
   // Remove unneeded default p5 sketch canvas
   noCanvas();
 
-  // Show example section. Hide create-transfer section
-  exampleSection.style.display = "block";
+  // Hide create-transfer section
   createSection.style.display = "none";
 
 // Get starting images by id. elt refers to html element
@@ -129,7 +128,7 @@ function enableTransfer() {
 
 // Remove example section when try button is clicked
 function showTransfer() {
-  createSection.style.display = "block";
+  createSection.style.display = "flex";
   exampleSection.style.display = "none";
   button.style.display = "none";
 }
