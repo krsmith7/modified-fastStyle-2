@@ -71,7 +71,7 @@ function doTransfer(model) {
 
   if (!modelReady) return;
 
-  console.log(`in doTransfer function. model: ${model}, contentImage: ${contentImage.id}, taco taco taco`);
+  console.log(`in doTransfer function. model: ${model}`);
   if (contentImage) {
     resultImageData = styles[model].predict(contentImage);
   }
