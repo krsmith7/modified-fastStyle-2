@@ -15,7 +15,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.body-container-subheading {
+.body-container-subheading, .instructions {
   font-family: 'Thasadith', sans-serif;
   color: grey;
 }
