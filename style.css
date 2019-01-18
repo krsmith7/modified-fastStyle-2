@@ -85,7 +85,7 @@ a#try-button:hover {
   padding: 30px;
 }
 
-.create-transfer-input-section, .create-transfer-style-section, .create-transfer-result-section {
+.create-transfer-input-section, .create-transfer-style-section, #create-transfer-result-section {
   border-radius: 10%;
   padding: 30px;
   width: 460px;
@@ -109,8 +109,11 @@ a#try-button:hover {
   justify-content: center;
 }
 
-.create-transfer-result-section {
+#create-transfer-result-section {
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .thumbnails {
@@ -124,12 +127,6 @@ a#try-button:hover {
   width: 100px;
   height: 100px;
   padding: 15px;
-}
-
-.create-transfer-result-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #result-image-container img {
