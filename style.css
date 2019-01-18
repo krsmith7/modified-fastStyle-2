@@ -79,8 +79,9 @@ a#try-button:hover {
 #create-transfer-container {
   display: flex;
   flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  /* background: lightgrey; */
+  align-items: center;
   padding: 30px;
 }
 
