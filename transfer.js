@@ -79,6 +79,8 @@ function doTransfer(model) {
   resultImage = ml5.array3DToImage(resultImageData);
   resultImageContainer.elt.src = resultImage.src;
   // isLoading = false;
+
+  console.log("resultImage", resultImage);
 }
 
 // draw function runs continuously by default
@@ -127,4 +129,13 @@ function showTransfer() {
   createSection.style.display = "flex";
   exampleSection.style.display = "none";
   button.style.display = "none";
+}
+
+function saveResultImage(resultImage) {
+//resultImage is object with src and style
+// Change src for result image
+  resultImageUrl = window.URL.createObjectURL(resultImage);
+  resultImage.src = resultImageUrl;
+  console.log(resultImage.src);
+  return resultImage.src;
 }
