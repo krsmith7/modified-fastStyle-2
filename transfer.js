@@ -12,7 +12,7 @@ let webCam = false;
 let modelReady = false;
 let video;
 let start = false;
-let isLoading = true;
+// let isLoading = false;
 const exampleSection = document.getElementById("transfer-container");
 const createSection = document.getElementById("create-transfer-container");
 const button = document.getElementById("try-button");
@@ -40,7 +40,7 @@ function setup() {
   uploader.addEventListener('change', newContentImage);
 
   // Resulting Image Container
-  resultImageContainer = createImg('images/loading.gif', 'image');
+  resultImageContainer = createImg('images/questionmark.png', 'image');
   // Specify location so new img element is not not added to end of page by default
   resultImageContainer.parent('result-image-container');
 
@@ -67,7 +67,7 @@ function modelLoaded() {
 
 // Function to predict resulting transfer image
 function doTransfer(model) {
-  isLoading = true;
+  // isLoading = true;
 
   if (!modelReady) return;
 
@@ -78,7 +78,7 @@ function doTransfer(model) {
 // Convert prediction data array to image
   resultImage = ml5.array3DToImage(resultImageData);
   resultImageContainer.elt.src = resultImage.src;
-  isLoading = false;
+  // isLoading = false;
 }
 
 // draw function runs continuously by default
