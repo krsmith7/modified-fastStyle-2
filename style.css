@@ -117,10 +117,9 @@ a#try-button:hover {
 }
 
 .thumbnails {
-  width: 400px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .thumbnails img {
