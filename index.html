@@ -57,7 +57,8 @@
                 <img src="./images/cat.jpeg" alt="cat picture" onClick="updateContentImage(this)">
                   <img src="./images/desert.jpeg" alt="desert photo" onClick="updateContentImage(this)">
             </div>
-            <div class="user-add-content">
+            <div class="button-section">
+              <label for="uploader">Upload an image: </label>
               <input id="uploader" name="inputImgFile" type="file" accept="image/*">
               <!-- <button id="upload-image-button" onClick="uploadImage()">Upload an image</button> -->
               <!-- <button id="use-webcam-button" onclick="useWebcam()">Use Webcam</button> -->
@@ -79,8 +80,10 @@
               <img src="./images/wreck.jpg" alt="Wreck Painting" id="wreck" onClick="updateStyleImage(this)">
               <img src="./images/udnie.jpg" alt="Udnie Painting" id="udnie" onClick="updateStyleImage(this)">
             </div>
-            <a href="#create-transfer-result-section"><button onclick="enableTransfer()"> Make it happen!
-            </button></a>
+            <div class="button-section">
+              <a href="#create-transfer-result-section"><button onclick="enableTransfer()"> Make it happen!
+              </button></a>
+          </div>
           </div>
 
           <div id="create-transfer-result-section">
@@ -89,7 +92,9 @@
               <!-- <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style"> -->
               <div id="result-image-container">
               </div>
-              <a href="/images/udnie.jpg" download="myStyleTransfer">Download Image</a>
+              <div class="button-section">
+                <button id="download-button" onclick="saveResultImage()">Download Image</button>
+            </div>
           </div>
         </div>
       </section>
