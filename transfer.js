@@ -21,48 +21,25 @@ const button = document.getElementById("try-button");
 function setup() {
   // Remove unneeded default p5 sketch canvas
   noCanvas();
-
   // Hide create-transfer section
   createSection.style.display = "none";
-
 // Get starting images by id. elt refers to html element
   contentImage = select('#content-image').elt;
   styleImage = select('#style-image').elt;
-
 // Load style models with ml5
-// ml5 doc: style1 = ml5.styleTransfer('models/wave', modelLoaded);
   models.forEach(s => {
     styles[s] = new ml5.TransformNet('models/' + s + '/', modelLoaded);
   });
-
   // Upload image
   uploader = select('#uploader').elt;
   uploader.addEventListener('change', newContentImage);
-
   // Resulting Image Container
   resultImageContainer = createImg('images/questionmark.png', 'image');
   // Specify location so new img element is not not added to end of page by default
   resultImageContainer.parent('result-image-container');
-
   // Get permission for camera
   // getCameraAccess();
 }
-
-// Method to use user camera
-function useWebcam() {
-  const constraints = {video: true};
-
-  navigator.mediaDevices.getUserMedia(constraints)
-  .then(function(mediaStream) {
-    const video = document.querySelector('video');
-    video.srcObject = mediaStream;
-    video.onloadedmetadata = function(e) {
-      video.play();
-    };
-  })
-  .catch(function(err) { console.log(err.name + ": " + err.message); });
-}
-
 
 // When models are loaded
 function modelLoaded() {
@@ -72,6 +49,30 @@ function modelLoaded() {
   // get ml prediction for selected content image
     // doTransfer(currentModel);
   }
+}
+
+// Method to use user camera
+function useWebcam() {
+  /// javascript webcam code
+  // const constraints = {video: true};
+  //
+  // navigator.mediaDevices.getUserMedia(constraints)
+  // .then(function(mediaStream) {
+  //   video = document.querySelector('video');
+  //   video.srcObject = mediaStream;
+  //   video.onloadedmetadata = function(e) {
+  //     video.play();
+  //   };
+  // })
+  // .catch(function(err) { console.log(err.name + ": " + err.message);
+  // });
+
+/// p5 webcam code
+  video = createCapture(VIDEO);
+  video.size(250, 250);
+  // Show video capture in place of content image
+  select('#content-image').hide();
+  video.parent('create-transfer-input-image');
 }
 
 // Function to predict resulting transfer image
@@ -134,17 +135,26 @@ function enableTransfer() {
 }
 
 // Remove example section when try button is clicked
-function showTransfer() {
+function showTransfer(ele) {
   createSection.style.display = "flex";
   exampleSection.style.display = "none";
   button.style.display = "none";
 }
 
-function saveResultImage(resultImage) {
+function saveResultImage() {
 //resultImage is object with src and style
 // Change src for result image
-  resultImageUrl = window.URL.createObjectURL(resultImage);
-  resultImage.src = resultImageUrl;
-  console.log(resultImage.src);
-  return resultImage.src;
+  // resultImageUrl = window.URL.createObjectURL(resultImage);
+  // resultImage.src = resultImageUrl;
+  // console.log(resultImage.src);
+  // return resultImage.src;
+  // error: transfer.js:137 Uncaught TypeError: Failed to execute 'createObjectURL' on 'URL': No function was found that matched the signature provided.
+
+  //
+  console.log(resultImageContainer.elt);
+  // <img src="data:image/png;base64,iVBOR...=" alt="image">
 }
+
+
+// don't have "this" in click handler on image. so is undefined earlier
+// in function when make resultImage object, add an onclick with this?

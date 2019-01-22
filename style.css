@@ -104,7 +104,7 @@ a#try-button:hover {
   margin: 15px;
 }
 
-.create-transfer-input-image, .create-transfer-style-image, .button-section, #result-image-container {
+#create-transfer-input-image, .create-transfer-style-image, .button-section, #result-image-container {
   display: flex;
   justify-content: center;
 }
