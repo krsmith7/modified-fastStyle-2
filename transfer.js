@@ -73,6 +73,7 @@ function useWebcam() {
   // Show video capture in place of content image
   select('#content-image').hide();
   video.parent('create-transfer-input-image');
+  webcam = true;
 }
 
 // Function to predict resulting transfer image
@@ -81,8 +82,10 @@ function doTransfer(model) {
 
   if (!modelReady) return;
 
-  console.log(`in doTransfer function. model: ${model}`);
-  if (contentImage) {
+  console.log(`in doTransfer function. model: ${model}, video: ${JSON.stringify(video)}`);
+  if (video) {
+    resultImageData = styles[model].predict(video.elt);
+  } else if (contentImage) {
     resultImageData = styles[model].predict(contentImage);
   }
 // Convert prediction data array to image
