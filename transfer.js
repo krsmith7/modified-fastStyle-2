@@ -78,7 +78,10 @@ function useWebcam() {
 
 function hideWebcam() {
   select('#content-image').show();
-  video.hide();
+  if (video) {
+    video.hide();
+    video = false;
+  }
 }
 
 // Function to predict resulting transfer image
