@@ -76,6 +76,11 @@ function useWebcam() {
   webcam = true;
 }
 
+function hideWebcam() {
+  select('#content-image').show();
+  video.hide();
+}
+
 // Function to predict resulting transfer image
 function doTransfer(model) {
   // isLoading = true;
@@ -104,11 +109,12 @@ function draw() {
 }
 
 function updateContentImage(ele) {
+  hideWebcam();
+
   if (ele.src) {
     contentImage.src = ele.src;
   }
 }
-
 
 function updateStyleImage(ele) {
   if (ele.src) {
@@ -119,6 +125,7 @@ function updateStyleImage(ele) {
 
 function uploadImage() {
   uploader.click();
+  hideWebcam();
 }
 
 // Set image uploaded from user as contentImage
