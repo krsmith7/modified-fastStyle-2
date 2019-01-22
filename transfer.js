@@ -49,10 +49,19 @@ function setup() {
 }
 
 // Method to use user camera
-// function getCameraAccess() {
-// // https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
-//   navigator.mediaDevices.getUserMedia(constraints)
-// }
+function useWebcam() {
+  const constraints = {video: true};
+
+  navigator.mediaDevices.getUserMedia(constraints)
+  .then(function(mediaStream) {
+    const video = document.querySelector('video');
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = function(e) {
+      video.play();
+    };
+  })
+  .catch(function(err) { console.log(err.name + ": " + err.message); });
+}
 
 
 // When models are loaded
