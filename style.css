@@ -51,7 +51,7 @@ main {
   width: 500px;
 }
 
-#try-button {
+button {
     border: solid grey 1px;
     border-radius: 10%;
     font-size: 18px;
@@ -61,11 +61,11 @@ main {
     margin: 5px;
 }
 
-#try-button a:link, a:visited {
+button:link, button:visited {
     border: grey;
 }
 
-a#try-button:hover {
+button:hover {
     border: solid #327068 1px;
 }
 
@@ -137,6 +137,6 @@ input#uploader {
   text-decoration: underline;
 }
 
-.link:hover, .thumbnails img:hover {
+.link:hover, .thumbnails img:hover, button:hover {
   cursor: pointer;
 }
