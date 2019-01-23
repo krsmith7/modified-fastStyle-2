@@ -154,5 +154,5 @@ input#uploader {
 
 #transfer-button:hover {
     border: solid blue 1px;
-    box-shadow: 5px 5px #327068;
+    box-shadow: 3px 3px #327068;
 }
