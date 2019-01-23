@@ -13,7 +13,7 @@ let modelReady = false;
 let video;
 let start = false;
 // let isLoading = false;
-const exampleSection = document.getElementById("transfer-container");
+const exampleSection = document.getElementById("example-transfer-container");
 const createSection = document.getElementById("create-transfer-container");
 const button = document.getElementById("try-button");
 

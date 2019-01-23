@@ -10,99 +10,92 @@
   </head>
 
   <body>
-    <div class="body-container">
-
-      <section id="header-section">
-        <header>
-          <h1 class="body-container-heading center-text">STENCIL FLOW</h1>
-          <h2 class="body-container-subheading center-text">Turn your ordinary image into a new masterpiece</h2>
-        </header>
-      </section>
-
-
-      <section id="example-transfer">
-        <div id="transfer-container">
-          <div class="transfer-container-grid">
-            <div class="transfer-container-grid-input">
-              <img class="transfer-inputs" src="./images/girlwithpearl.jpg" alt="Girl with Pearl Earring Painting">
+    <header>
+      <h1 class="heading center-text">STENCIL FLOW</h1>
+      <h2 class="subheading center-text">Turn your ordinary image into a new masterpiece</h2>
+    </header>
+    <main>
+        <section id="example-transfer">
+          <div id="example-transfer-container">
+            <div class="example-transfer-grid">
+              <div class="example-transfer-grid-input">
+                <img class="transfer-inputs" src="./images/girlwithpearl.jpg" alt="Girl with Pearl Earring Painting">
+              </div>
+              <div class="example-transfer-grid-style">
+                  <img class="transfer-inputs" src="./images/wave.jpg" alt="Wave Painting">
+              </div>
+              <div class="example-transfer-grid-result">
+                <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style">
+              </div>
             </div>
-            <div class="transfer-container-grid-style">
-                <img class="transfer-inputs" src="./images/wave.jpg" alt="Wave Painting">
-            </div>
-            <div class="transfer-container-grid-result">
-              <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style">
-            </div>
-          </div>
-        </div>
-
-        <button id="try-button" onclick="showTransfer()">Try it Yourself</button>
-        <!-- <a href="#create-transfer" id="try-button">Try it Yourself!</a>  -->
-      </section>
-
-
-      <section id="create-transfer">
-        <div id="create-transfer-container">
-
-          <div class="create-transfer-input-section">
-                <h3 class="center-text">CONTENT</h3>
-                <p class="center-text instructions">Step 1: Pick an image to style or upload your own</p>
-            <div id="create-transfer-input-image">
-              <img class="transfer-inputs" id="content-image" src="./images/cat.jpeg" alt="kitten photo">
-            </div>
-            <div class="thumbnails">
-                <img src="./images/girlwithpearl.jpg" alt="Girl with Pearl Earring Painting" onClick="updateContentImage(this)">
-                <img src="./images/sunflower.jpg" alt="sunflower painting" onClick="updateContentImage(this)">
-                <img src="./images/monalisa.jpg" alt="Mona Lisa painting" onClick="updateContentImage(this)">
-                <img src="./images/josephine-baker.jpg" alt="josephine baker portrait" onClick="updateContentImage(this)">
-                <img src="./images/cat.jpeg" alt="cat picture" onClick="updateContentImage(this)">
-                  <img src="./images/desert.jpeg" alt="desert photo" onClick="updateContentImage(this)">
-            </div>
-            <div class="button-section">
-              <label for="uploader">Upload an image: </label>
-              <input id="uploader" name="inputImgFile" type="file" accept="image/*">
-              <!-- <button id="upload-image-button" onClick="uploadImage()">Upload an image</button> -->
-              <button id="use-webcam-button" onclick="useWebcam()">Use Webcam</button>
-            </div>
+            <button id="try-button" onclick="showTransfer()">Try it Yourself</button>
           </div>
 
 
-          <div class="create-transfer-style-section">
-            <h3 class="center-text">STYLE</h3>
-            <p class="center-text instructions">Step 2: Pick a style to add to your image</p>
-            <div class="create-transfer-style-image">
-                <img class="transfer-inputs" id="style-image" src="./images/wave.jpg" alt="Wave Painting">
+          <!-- <a href="#create-transfer" id="try-button">Try it Yourself!</a>  -->
+        </section>
+
+
+        <section id="create-transfer">
+          <div id="create-transfer-container">
+
+            <div class="create-transfer-input-section">
+                  <h3 class="center-text">CONTENT</h3>
+                  <p class="center-text instructions">Step 1: Pick an image to style or upload your own</p>
+              <div id="create-transfer-input-image">
+                <img class="transfer-inputs" id="content-image" src="./images/cat.jpeg" alt="kitten photo">
+              </div>
+              <div class="thumbnails">
+                  <img src="./images/girlwithpearl.jpg" alt="Girl with Pearl Earring Painting" onClick="updateContentImage(this)">
+                  <img src="./images/sunflower.jpg" alt="sunflower painting" onClick="updateContentImage(this)">
+                  <img src="./images/monalisa.jpg" alt="Mona Lisa painting" onClick="updateContentImage(this)">
+                  <img src="./images/josephine-baker.jpg" alt="josephine baker portrait" onClick="updateContentImage(this)">
+                  <img src="./images/cat.jpeg" alt="cat picture" onClick="updateContentImage(this)">
+                    <img src="./images/desert.jpeg" alt="desert photo" onClick="updateContentImage(this)">
+              </div>
+              <div class="button-section">
+                <label for="uploader">Upload an image: </label>
+                <input id="uploader" name="inputImgFile" type="file" accept="image/*">
+                <!-- <button id="upload-image-button" onClick="uploadImage()">Upload an image</button> -->
+                <button id="use-webcam-button" onclick="useWebcam()">Use Webcam</button>
+              </div>
             </div>
-            <div class="thumbnails">
-              <img src="./images/wave.jpg" alt="Wave Painting" id="wave" onClick="updateStyleImage(this)">
-              <img src="./images/rain_princess.jpg" alt="Rain Princess Painting" id="rain_princess" onClick="updateStyleImage(this)">
-              <img src="./images/la_muse.jpg" alt="La Muse Painting" id="la_muse" onClick="updateStyleImage(this)">
-              <img src="./images/scream.jpg" alt="Scream Painting" id="scream" onClick="updateStyleImage(this)">
-              <img src="./images/wreck.jpg" alt="Wreck Painting" id="wreck" onClick="updateStyleImage(this)">
-              <img src="./images/udnie.jpg" alt="Udnie Painting" id="udnie" onClick="updateStyleImage(this)">
+
+
+            <div class="create-transfer-style-section">
+              <h3 class="center-text">STYLE</h3>
+              <p class="center-text instructions">Step 2: Pick a style to add to your image</p>
+              <div class="create-transfer-style-image">
+                  <img class="transfer-inputs" id="style-image" src="./images/wave.jpg" alt="Wave Painting">
+              </div>
+              <div class="thumbnails">
+                <img src="./images/wave.jpg" alt="Wave Painting" id="wave" onClick="updateStyleImage(this)">
+                <img src="./images/rain_princess.jpg" alt="Rain Princess Painting" id="rain_princess" onClick="updateStyleImage(this)">
+                <img src="./images/la_muse.jpg" alt="La Muse Painting" id="la_muse" onClick="updateStyleImage(this)">
+                <img src="./images/scream.jpg" alt="Scream Painting" id="scream" onClick="updateStyleImage(this)">
+                <img src="./images/wreck.jpg" alt="Wreck Painting" id="wreck" onClick="updateStyleImage(this)">
+                <img src="./images/udnie.jpg" alt="Udnie Painting" id="udnie" onClick="updateStyleImage(this)">
+              </div>
+              <div class="button-section">
+                <a href="#create-transfer-result-section"><button onclick="enableTransfer()"> Make it happen!
+                </button></a>
             </div>
-            <div class="button-section">
-              <a href="#create-transfer-result-section"><button onclick="enableTransfer()"> Make it happen!
-              </button></a>
-          </div>
-          </div>
-
-          <div id="create-transfer-result-section">
-            <h3 class="center-text">VOILA!</h3>
-            <p class="center-text instructions">Step 3: Marvel at your creation!</p>
-              <!-- <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style"> -->
-            <div id="result-image-container">
             </div>
-            <!-- <div class="button-section">
-              <button id="download-button" onclick="saveResultImage()">Download Image</button>
-            </div> -->
+
+            <div id="create-transfer-result-section">
+              <h3 class="center-text">VOILA!</h3>
+              <p class="center-text instructions">Step 3: Marvel at your creation!</p>
+                <!-- <img class="transfer-output" src="./images/girlpearlwaved.png" alt="Girl with Pearl with Wave Style"> -->
+              <div id="result-image-container">
+              </div>
+              <!-- <div class="button-section">
+                <button id="download-button" onclick="saveResultImage()">Download Image</button>
+              </div> -->
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </div>
-
-
-
-    <script src="transfer.js"></script>
+      <script src="transfer.js"></script>
+    </main>
   </body>
 </html>

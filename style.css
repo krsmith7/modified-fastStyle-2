@@ -2,54 +2,49 @@
   text-align: center;
 }
 
-.body-container {
+main {
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: column;
   flex-wrap: wrap;
 }
 
 
-.body-container-heading, h3 {
+.heading, h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.body-container-subheading, .instructions {
+.subheading, .instructions {
   font-family: 'Thasadith', sans-serif;
   color: grey;
 }
 
-#transfer-container {
-  display: flex;
-  justify-content: center;
-  margin: 30px;
+#example-transfer-container {
+  display: grid;
 }
 
-.transfer-container-grid {
+.example-transfer-grid {
   display: grid;
-  width: 60%;
-  height: 40%;
   grid-template: "input result result"
                  "style result result";
   grid-gap: 10px;
 }
 
-.transfer-container-grid-input {
+.example-transfer-grid-input {
   grid-area: input;
 }
 
-.transfer-container-grid-style {
+.example-transfer-grid-style {
   grid-area: style;
+}
+
+.example-transfer-grid-result {
+  grid-area: result;
 }
 
 .transfer-inputs {
   height: 250px;
   width: 250px;
-}
-
-.transfer-container-grid-result {
-  grid-area: result;
 }
 
 .transfer-output {
@@ -60,12 +55,11 @@
 #try-button {
     border: solid grey 1px;
     border-radius: 10%;
-    width: 10%;
     font-size: 18px;
     text-decoration: none;
     padding: 10px;
     color: #327068;
-    margin-left: 20px;
+    margin: 5px;
 }
 
 #try-button a:link, a:visited {
@@ -78,7 +72,6 @@ a#try-button:hover {
 
 #create-transfer-container {
   display: flex;
-  flex-direction: row;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
