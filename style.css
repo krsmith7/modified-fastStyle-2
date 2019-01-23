@@ -9,7 +9,6 @@ main {
   flex-wrap: wrap;
 }
 
-
 .heading, h3 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -72,16 +71,15 @@ a#try-button:hover {
 
 #create-transfer-container {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 30px;
+  padding: 10px;
 }
 
 .create-transfer-input-section, .create-transfer-style-section, #create-transfer-result-section {
   border-radius: 10%;
-  padding: 30px;
-  width: 460px;
+  /* padding: 20px; */
+  max-width: 460px;
     /* border: solid 1px dimgrey; */
 }
 
