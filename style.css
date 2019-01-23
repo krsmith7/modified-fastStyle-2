@@ -51,7 +51,7 @@ main {
   width: 500px;
 }
 
-button {
+#try-button {
     border: solid grey 1px;
     border-radius: 10%;
     font-size: 18px;
@@ -61,11 +61,11 @@ button {
     margin: 5px;
 }
 
-button:link, button:visited {
+#try-button:link, #try-button:visited {
     border: grey;
 }
 
-button:hover {
+#try-button:hover {
     border: solid #327068 1px;
 }
 
@@ -139,4 +139,20 @@ input#uploader {
 
 .link:hover, .thumbnails img:hover, button:hover {
   cursor: pointer;
+}
+
+#transfer-button {
+  background-color: lavender;
+  border: solid #327068 1px;
+  border-radius: 10%;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  color: #327068;
+  margin: 5px;
+}
+
+#transfer-button:hover {
+    border: solid blue 1px;
+    box-shadow: 5px 5px #327068;
 }
