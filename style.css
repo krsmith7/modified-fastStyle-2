@@ -24,21 +24,55 @@ main {
 
 .example-transfer-grid {
   display: grid;
-  grid-template: "input result result"
-                 "style result result";
+  grid-template: "instr-i input result result instr-r"
+                 "instr-s style result result instr-r";
   grid-gap: 10px;
+}
+
+#input-instr {
+  grid-area: instr-i;
+}
+
+#input-instr, #style-instr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+  padding-right: 15px;
 }
 
 .example-transfer-grid-input {
   grid-area: input;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#style-instr {
+  grid-area: instr-s;
 }
 
 .example-transfer-grid-style {
   grid-area: style;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#result-instr {
+  grid-area: instr-r;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  padding-left: 15px;
 }
 
 .example-transfer-grid-result {
   grid-area: result;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .transfer-inputs {
@@ -47,8 +81,8 @@ main {
 }
 
 .transfer-output {
-  height: 500px;
-  width: 500px;
+  height: 505px;
+  width: 505px;
 }
 
 #try-button {
@@ -58,7 +92,7 @@ main {
     text-decoration: none;
     padding: 10px;
     color: #327068;
-    margin: 5px;
+    margin: 10px;
 }
 
 #try-button:link, #try-button:visited {

@@ -19,13 +19,16 @@
           <div id="example-transfer-container">
             <div class="example-transfer-grid">
               <div class="example-transfer-grid-input">
+                <p class="instructions" id="input-instr"> Pick an image to morph </p>
                 <img class="transfer-inputs" src="./images/jimi_hendrix.jpeg" alt="Photo of Jimi Hendrix">
               </div>
               <div class="example-transfer-grid-style">
+                  <p class="instructions" id="style-instr"> Pick a new style </p>
                   <img class="transfer-inputs" src="./images/rain_princess.jpg" alt="Rain Princess Painting">
               </div>
               <div class="example-transfer-grid-result">
                 <img class="transfer-output" src="./images/jimi_rain.png" alt="Jimi Hendrix with Rain Princess style">
+                <p class="instructions" id="result-instr"> Marvel at your creation! </p>
               </div>
             </div>
             <button id="try-button" onclick="showTransfer()">Try it Yourself</button>
