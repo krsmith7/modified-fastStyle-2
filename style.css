@@ -107,6 +107,7 @@ main {
 
 #try-button:hover {
     border: solid #327068 1px;
+    border-radius: 10%;
 }
 
 #create-transfer-container {
@@ -117,14 +118,15 @@ main {
 }
 
 .create-transfer-input-section, .create-transfer-style-section, #create-transfer-result-section {
-  border-radius: 10%;
+  /* border-radius: 10%; */
   padding: 20px;
   max-width: 460px;
     /* border: solid 1px dimgrey; */
 }
 
 .create-transfer-input-section {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  border: solid 1px lightgrey;
   display: grid;
   margin: 15px;
 }
@@ -134,7 +136,8 @@ input#uploader {
 }
 
 .create-transfer-style-section {
-  background-color: lavender;
+  /* background-color: lavender; */
+  border: solid 1px lightgrey;
   display: grid;
   margin: 15px;
 }
@@ -145,7 +148,8 @@ input#uploader {
 }
 
 #create-transfer-result-section {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  border: solid 1px lightgrey;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,7 +186,7 @@ input#uploader {
 }
 
 #transfer-button {
-  background-color: lavender;
+  /* background-color: lavender; */
   border: solid #327068 1px;
   border-radius: 10%;
   font-size: 18px;
