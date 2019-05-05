@@ -85,6 +85,11 @@ main {
   width: 505px;
 }
 
+#try-container {
+  display: flex;
+  justify-content: center;
+}
+
 #try-button {
     border: solid grey 1px;
     border-radius: 10%;
@@ -93,6 +98,7 @@ main {
     padding: 10px;
     color: #327068;
     margin: 10px;
+    width: 150px;
 }
 
 #try-button:link, #try-button:visited {
